@@ -10,9 +10,9 @@ module.exports = function (shipit) {
       ignores: ['.git', 'node_modules'],
       rsync: ['--del'],
       keepReleases: 2,
-      shallowClone: true
+      shallowClone: true,
     npm: {
-      remote: false,
+      remote: true,
       installArgs: ['gulp']
     }
 
