@@ -1,5 +1,6 @@
 module.exports = function (shipit) {
   require('shipit-deploy')(shipit);
+  require('shipit-npm')(shipit);
 
   shipit.initConfig({
     default: {
@@ -10,6 +11,11 @@ module.exports = function (shipit) {
       rsync: ['--del'],
       keepReleases: 2,
       shallowClone: true
+    npm: {
+      remote: false,
+      installArgs: ['gulp']
+    }
+
     },
     staging: {
       servers: 'deploy@mad.itk.ppke.hu'
