@@ -1,4 +1,4 @@
-odule.exports = function (shipit) {
+module.exports = function (shipit) {
   require('shipit-deploy')(shipit);
 
   shipit.initConfig({
@@ -14,5 +14,8 @@ odule.exports = function (shipit) {
     staging: {
       servers: 'deploy@mad.itk.ppke.hu'
     }
+  });
+    shipit.task('pwd', function () {
+    return shipit.remote('pwd');
   });
 };
