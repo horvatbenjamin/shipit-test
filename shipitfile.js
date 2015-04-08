@@ -7,9 +7,10 @@ module.exports = function (shipit) {
       workspace: '/tmp/github-monitor',
       deployTo: '/tmp/deploy_to',
       repositoryUrl: 'https://github.com/horvatbenjamin/shipit-test.git',
-      ignores: ['.git', 'node_modules'],
+//      ignores: ['.git', 'node_modules'],
+      ignores: ['.git'],
       rsync: ['--del'],
-      keepReleases: 2,
+      keepReleases: 5,
       shallowClone: true,
     npm: {
       remote: false
