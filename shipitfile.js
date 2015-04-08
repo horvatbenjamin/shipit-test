@@ -12,8 +12,8 @@ module.exports = function (shipit) {
       keepReleases: 2,
       shallowClone: true,
     npm: {
-      remote: true,
-      installArgs: ['gulp']
+      remote: false
+//      installArgs: ['gulp']
     }
 
     },
