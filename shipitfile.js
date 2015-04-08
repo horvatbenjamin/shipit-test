@@ -22,6 +22,9 @@ module.exports = function (shipit) {
       servers: 'deploy@mad.itk.ppke.hu'
     }
   });
+    shipit.on('published', function () {
+      shipit.start('start-server');
+    });
     shipit.task('pwd', function () {
     return shipit.remote('pwd');
   });
