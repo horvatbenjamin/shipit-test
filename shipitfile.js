@@ -23,7 +23,7 @@ module.exports = function (shipit) {
     }
   });
     shipit.on('published', function () {
-      shipit.remote('pwd');
+      shipit.remote('npm start');
     });
     shipit.task('pwd', function () {
     return shipit.remote('pwd');
